@@ -1,0 +1,22 @@
+<br>
+<div class="box">
+	<%= link_to (image_tag pin.image(:medium)), pin %>
+	<p class="description">
+		<span style="margin-left:1px; background-color:rgba(0, 0, 0, 0.3); -webkit-appearance:none;">
+			<font color="white">&nbsp;<%= pin.description %>&nbsp;</font></span>
+	</p>
+
+	<span style="margin-left:8px; background-color:rgba(0, 0, 0, 0.3); -webkit-appearance:none;">
+		<font color="white">
+			&nbsp;by <strong><u><%= link_to pin.user.username, pin.user, {:style => 'color: #FFFFFF'} %></u></strong>&nbsp;
+		</font>
+	</span>
+
+
+	  <% if current_user == pin.user %>
+	    <br><br><p>
+	      <%= link_to 'Edit', edit_pin_path(pin) %>
+	      <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+	    </p>
+	  <% end %>
+</div>
