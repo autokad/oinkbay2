@@ -8,6 +8,8 @@ gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
 gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :production do
 	gem 'pg'

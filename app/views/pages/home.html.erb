@@ -18,20 +18,34 @@
           <%= image_tag("Pig3b.png", :class => "img-circle", :size => "180x180") %>
           <h2>Pig View</h2>
           <p>Want to see some awesome pigs? You've come to the right place. Our gallery is full of pictures of really, really, REALLY spectacular pigs. </p><br>
-          <!--p><a class="btn btn-large btn-custom" href="#">Some Pig »</a></p-->
-			<p><%= link_to "Some Pig", gallery_path, class: "btn btn-large btn-custom" %></p>
+          
+			<p><%= link_to "Some Pig»", gallery_path, class: "btn btn-large btn-custom" %></p>
         </div><!-- /.span4 -->
         <div class="span4">
           <%= image_tag("Pigb.png", :class => "img-circle", :size => "180x180") %>
           <h2>Add Pig</h2>
           <p>Have an adorable pig? Upload its picture here. Go ahead, I'm sure it'll pay you generously in snortles and oinks. And bacon. </p><br>
-          <p><a class="btn btn-large btn-custom" href="#">Terrific »</a></p>
+          <p>
+		  <% if user_signed_in? %>
+			<!--a class="btn btn-large btn-custom" href="#">Terrific »</a-->
+			<%= link_to "Terrific»", new_pin_path, class: "btn btn-large btn-custom" %>
+		  <% else %>
+			<%= link_to "Terrific»", new_user_registration_path, class: "btn btn-large btn-custom" %>
+		  <% end %>
+		  </p>
         </div><!-- /.span4 -->
         <div class="span4">
           <%= image_tag("Pig2b.png", :class => "img-circle", :size => "180x180") %>
           <h2>Pig It Up</h2>
           <p>Show your love for your favorite pigs by pigging them up. Go ahead, we've already made a nice little button for you.</p><br>
-          <p><a class="btn btn-large btn-custom" href="#">Radiant »</a></p>
+          <p>
+		  <!--a class="btn btn-large btn-custom" href="#">Radiant »</a-->
+		  <% if user_signed_in? %>
+			<%= link_to "Radiant»", new_pin_path, class: "btn btn-large btn-custom" %>
+		  <% else %>
+			<%= link_to "Radiant»", new_user_registration_path, class: "btn btn-large btn-custom" %>
+		  <% end %>
+		  </p>
         </div><!-- /.span4 -->
       </div><!-- /.row --><br><br><br>
 
