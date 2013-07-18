@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+#fblogin{
+	color: #00FF00;
+	background:url('\facebook_login.png') 0 0 no-repeat;
+	background-image: url ('\facebook_login.png') no-repeat;
+}
