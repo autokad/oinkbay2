@@ -27,7 +27,6 @@
           <p>Have an adorable pig? Upload its picture here. Go ahead, I'm sure it'll pay you generously in snortles and oinks. And bacon. </p><br>
           <p>
 		  <% if user_signed_in? %>
-			<!--a class="btn btn-large btn-custom" href="#">Terrific »</a-->
 			<%= link_to "Terrific»", new_pin_path, class: "btn btn-large btn-custom" %>
 		  <% else %>
 			<%= link_to "Terrific»", new_user_registration_path, class: "btn btn-large btn-custom" %>
