@@ -12,6 +12,8 @@ Oinkbay::Application.routes.draw do
   get 'about' => 'pages#about'
   get 'contact' => 'pages#contact'
 
+  match 'like/:id' => 'pins#vote_up', :as => 'like'
+  match 'notlike/:id' => 'pins#vote_down', :as => 'notlike'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

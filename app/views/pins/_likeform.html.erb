@@ -1,0 +1,12 @@
+<%= form_tag(like_path(@pin.id), :remote => true, :style => 'display: inline;') do %>
+	<%= image_submit_tag("like.png", :alt => "Like!", :title => "Like!") %>
+	<div id="likes" style="display: inline;">
+		<%= render :partial => "like" %>
+	</div>
+<% end %>
+<%= form_tag(notlike_path(@pin.id), :remote => true, :style => 'display: inline;') do %>
+	<%= image_submit_tag("dislike.png", :alt => "Dislike!", :title => "Dislike!", :style => 'display: inline;') %>
+	<div id="dislikes" style="display: inline;">
+		<%= render :partial => "dislike" %>
+	</div>
+<% end %>

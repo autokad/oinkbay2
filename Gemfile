@@ -10,6 +10,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'make_voteable'
 
 group :production do
 	gem 'pg'

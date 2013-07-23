@@ -74,6 +74,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    make_voteable (0.1.1)
+      activerecord (~> 3.0)
     mime-types (1.23)
     multi_json (1.7.7)
     multipart-post (1.2.0)
@@ -164,6 +166,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   jquery-rails
+  make_voteable
   omniauth
   omniauth-facebook
   paperclip (~> 3.0)
