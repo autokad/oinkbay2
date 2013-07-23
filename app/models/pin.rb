@@ -1,8 +1,8 @@
 class Pin < ActiveRecord::Base
   attr_accessible :description, :image, :image_remote_url
   
-	#for voting
-	make_voteable
+  #for voting
+  make_voteable
   
   validates :description, presence: true
   validates :user_id, presence: true
